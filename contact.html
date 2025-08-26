@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+<body class="data-header-type=" solid>
+    <!-- Header -->
+    <div id="navbar" class="w-full"></div>
+
+    <section class="py-16 pt-32">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800">Contact Us</h2>
+                <p class="text-xl text-blue-500">We’re just a message away from building something amazing.</p>
+            </div>
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Contact Info -->
+                <div class="bg-blue-500 text-white p-8 rounded-lg shadow-lg space-y-6">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Let's get in touch</h3>
+                        <p class="text-blue-100">We’re open for any suggestion or just to have a chat.</p>
+                    </div>
+                    <!-- Address -->
+                    <div class="flex items-start space-x-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 flex-shrink-0 text-white" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 11c1.104 0 2-.896 2-2s-.896-2-2-2-2 .896-2 2 .896 2 2 2z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 2C8.134 2 5 5.134 5 9c0 7 7 13 7 13s7-6 7-13c0-3.866-3.134-7-7-7z" />
+                        </svg>
+                        <p id="user-location"><span class="font-semibold">Address:</span> SRS Tower Sector-31 </p>
+                    </div>
+                    <!-- Phone -->
+                    <div class="flex items-center space-x-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 flex-shrink-0" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 5a2 2 0 012-2h3.586a1 1 0 01.707.293l2.828 2.828a1 1 0 01.293.707V10a1 1 0 01-.293.707l-1.414 1.414a16.03 16.03 0 006.364 6.364l1.414-1.414A1 1 0 0118 16h2.172a1 1 0 01.707.293l2.828 2.828a1 1 0 01.293.707V22a2 2 0 01-2 2h-1C9.373 24 0 14.627 0 3V2a2 2 0 012-2h1z" />
+                        </svg>
+                        <p><span class="font-semibold">Phone:</span> <a href="tel:+1235235598"
+                                class="hover:underline">+1235 2355 98</a></p>
+                    </div>
+                    <!-- Email -->
+                    <div class="flex items-center space-x-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 flex-shrink-0" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M16 12H8m8 0V4m0 8v8M4 4h16v16H4z" />
+                        </svg>
+                        <p><span class="font-semibold">Email:</span> <a href="mailto:info@yoursite.com"
+                                class="hover:underline">info@yoursite.com</a></p>
+                    </div>
+                    <!-- Website -->
+                    <div class="flex items-center space-x-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 flex-shrink-0" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 4.354a4 4 0 014 0l3.536 2.036a4 4 0 012 3.464v4.292a4 4 0 01-2 3.464l-3.536 2.036a4 4 0 01-4 0l-3.536-2.036a4 4 0 01-2-3.464V9.854a4 4 0 012-3.464L12 4.354z" />
+                        </svg>
+                        <p><span class="font-semibold">Website:</span> <a href="#"
+                                class="hover:underline">yoursite.com</a></p>
+                    </div>
+                </div>
+                <!-- Contact Form -->
+                <div class="lg:col-span-2 bg-white p-8 rounded-lg shadow-lg">
+                    <form action="#" method="POST" class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-gray-700 font-medium mb-2">Full Name</label>
+                                <input type="text" id="name" name="name" placeholder="Your Name"
+                                    class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
+                                <input type="email" id="email" name="email" placeholder="Your Email"
+                                    class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-gray-700 font-medium mb-2">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="Subject"
+                                class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Write your message..."
+                                class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                        </div>
+                        <button type="submit"
+                            class="bg-blue-500 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <!--load components-->
+    <script src="js/load.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: false });
+    </script>
+</body>
+</html>

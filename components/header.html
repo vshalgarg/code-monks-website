@@ -1,0 +1,49 @@
+<!-- components/header.html -->
+<header class="fixed  h-24 transition-all duration-300 w-full z-[9999]">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full relative z-[60]">
+    <nav class="flex justify-between items-center h-full  ">
+      <div class="flex items-center space-x-2">
+  <img src="images/logo/codemonkslogo (1).png" alt="Code Monks Logo"
+    class="h-16 w-16 sm:h-20 sm:w-20 md:h-24 md:w-24 lg:h-16 lg:w-16 object-contain">
+</div>
+
+
+      <div class="hidden md:flex space-x-6 nav-links">
+        <a href="index.html" class="font-medium  hover:text-blue-600 transition-colors duration-300">Home</a>
+        <a href="about.html" class="font-medium  hover:text-blue-600 transition-colors duration-300">About Us</a>
+        <a href="services.html" class="font-medium  hover:text-blue-600 transition-colors duration-300">Services</a>
+        <a href="products.html" class="font-medium  hover:text-blue-600 transition-colors duration-300">Products</a>
+        <a href="contact.html" class="font-medium  hover:text-blue-600 transition-colors duration-300">Contact</a>
+      </div>
+
+      <div class="md:hidden">
+        <button id="menuBtn" class="focus:outline-none transition-colors duration-300 text-icon">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu"
+    class="md:hidden hidden fixed  absolute right-4 top-24 bg-white rounded-lg shadow-lg w-48 overflow-hidden z-50">
+    <a href="index.html" class="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Home</a>
+    <a href="about.html" class="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">About
+      Us</a>
+    <a href="services.html"
+      class="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Services</a>
+    <a href="products.html"
+      class="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Products</a>
+    <a href="contact.html"
+      class="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Contact</a>
+  </div>
+</header>
+
+<script>
+  // Toggle mobile menu
+  document.getElementById('menuBtn').addEventListener('click', function () {
+    document.getElementById('mobileMenu').classList.toggle('hidden');
+  });
+</script>

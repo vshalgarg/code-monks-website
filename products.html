@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Filter</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- AOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <div id="navbar" class="w-full"></div>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="pt-28 py-16">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <!-- Title -->
+            <h2 data-aos="fade-down"
+                class="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600 mb-4">
+                Portfolio
+            </h2>
+            <div data-aos="fade-down" data-aos-delay="50"
+                class="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full mb-6"></div>
+            <!-- Description -->
+            <p data-aos="fade-down" data-aos-delay="100"
+                class="text-gray-700 text-lg leading-relaxed max-w-3xl mx-auto">
+                At <span class="font-bold text-blue-600">Code Monks</span>, every project reflects our
+                <span class="text-purple-600 font-semibold">commitment to innovation</span>, quality, and results.
+                We partner with clients across industries to build impactful digital solutions that
+                <span class="italic">solve problems</span>, enhance experiences, and drive growth.
+                Here’s a glimpse of what we’ve delivered — each crafted with precision and purpose.
+            </p>
+            <!-- Filter Buttons -->
+            <div class="pt-10 mb-12 flex justify-center flex-wrap gap-4" data-aos="fade-up" data-aos-delay="100">
+                <button
+                    class="filter-btn px-6 py-2 text-xs rounded-2xl font-medium transition duration-300 text-gray-700 bg-white border border-gray-300 shadow"
+                    data-filter="all">All</button>
+                <button
+                    class="filter-btn px-6 py-2 text-xs rounded-2xl font-medium transition duration-300 text-gray-700 bg-white border border-gray-300 shadow"
+                    data-filter="web">Web</button>
+                <button
+                    class="filter-btn px-6 py-2 text-xs rounded-2xl font-medium transition duration-300 text-gray-700 bg-white border border-gray-300 shadow "
+                    data-filter="app">App</button>
+            </div>
+            <!-- Project Cards -->
+            <div id="project-container" class="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
+                <!-- Project Card 1: web -->
+                <div class="project-card web relative group rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 bg-white"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <img src="images/code-monks/code-monks1.png" alt="Project 1"
+                        class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex 
+                        justify-center items-center p-4">
+                        <div class="text-white">
+                            <h3 class="text-xl font-semibold">E-Commerce Website</h3>
+                            <p class="text-sm">Built with React & Spring Boot</p>
+                            <a href="#"
+                                class="mt-2 inline-block text-sm bg-orange-500 px-4 py-1.5 rounded-full hover:bg-orange-600 transition">View
+                                More</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Card 2: Web -->
+                <div class="project-card web relative group rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 bg-white"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://themewagon.github.io/Company/assets/img/about.jpg" alt="Project 2"
+                        class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex justify-center items-center p-4">
+                        <div class="text-white">
+                            <h3 class="text-xl font-semibold">Personal Portfolio</h3>
+                            <p class="text-sm">Built with HTML, Tailwind & JavaScript</p>
+                            <a href="#"
+                                class="mt-2 inline-block text-sm bg-orange-500 px-4 py-1.5 rounded-full hover:bg-orange-600 transition">View
+                                More</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Card 3: web -->
+                <div class="project-card web relative group rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 bg-white"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <img src="https://themewagon.github.io/Company/assets/img/masonry-portfolio/masonry-portfolio-2.jpg"
+                        alt="Project 3"
+                        class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex justify-center items-center p-4">
+                        <div class="text-white">
+                            <h3 class="text-xl font-semibold">Banking App</h3>
+                            <p class="text-sm">Built using Spring Boot & MySQL</p>
+                            <a href="#"
+                                class="mt-2 inline-block text-sm bg-orange-500 px-4 py-1.5 rounded-full hover:bg-orange-600 transition">View
+                                More</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Card 4: web -->
+                <div class="project-card web relative group rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 bg-white"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <img src="https://themewagon.github.io/Company/assets/img/masonry-portfolio/masonry-portfolio-3.jpg"
+                        alt="Project 3"
+                        class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex justify-center items-center p-4">
+                        <div class="text-white">
+                            <h3 class="text-xl font-semibold">Banking App</h3>
+                            <p class="text-sm">Built using Spring Boot & MySQL</p>
+                            <a href="#"
+                                class="mt-2 inline-block text-sm bg-orange-500 px-4 py-1.5 rounded-full hover:bg-orange-600 transition">View
+                                More</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Card 5: app -->
+                <div class="project-card app relative group rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 bg-white"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <img src="https://themewagon.github.io/Company/assets/img/masonry-portfolio/masonry-portfolio-1.jpg"
+                        alt="Project 3"
+                        class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex justify-center items-center p-4">
+                        <div class="text-white">
+                            <h3 class="text-xl font-semibold">Banking App</h3>
+                            <p class="text-sm">Built using Spring Boot & MySQL</p>
+                            <a href="#"
+                                class="mt-2 inline-block text-sm bg-orange-500 px-4 py-1.5 rounded-full hover:bg-orange-600 transition">View
+                                More</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Card 6: app -->
+                <div class="project-card app relative group rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 bg-white"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <img src="https://themewagon.github.io/Company/assets/img/masonry-portfolio/masonry-portfolio-7.jpg"
+                        alt="Project 3"
+                        class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex justify-center items-center p-4">
+                        <div class="text-white">
+                            <h3 class="text-xl font-semibold">Banking App</h3>
+                            <p class="text-sm">Built using Spring Boot & MySQL</p>
+                            <a href="#"
+                                class="mt-2 inline-block text-sm bg-orange-500 px-4 py-1.5 rounded-full hover:bg-orange-600 transition">View
+                                More</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Card 8: app -->
+                <div class="project-card app relative group rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 bg-white"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <img src="https://themewagon.github.io/Company/assets/img/masonry-portfolio/masonry-portfolio-6.jpg"
+                        alt="Project 3"
+                        class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex justify-center items-center p-4">
+                        <div class="text-white">
+                            <h3 class="text-xl font-semibold">Banking App</h3>
+                            <p class="text-sm">Built using Spring Boot & MySQL</p>
+                            <a href="#"
+                                class="mt-2 inline-block text-sm bg-orange-500 px-4 py-1.5 rounded-full hover:bg-orange-600 transition">View
+                                More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Contact Us-->
+    <section class="py-16 bg-gradient-to-r from-[#7354ed] to-[#9b78ff] text-white text-center" data-aos="fade-up"
+        data-aos-delay="100">
+        <h2 class="text-3xl font-bold mb-4">Need a Custom Solution?</h2>
+        <p class="mb-6">Get in touch with our team to build something tailored to your business.</p>
+        <!-- In "Contact Us" CTA Button -->
+        <a href="contact.html"
+            class="inline-flex items-center gap-2 px-6 py-3 bg-white text-purple-600 font-semibold rounded-full shadow hover:bg-gray-100 transition">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M21 8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2h14a2 2 0 002-2V8z"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l9 6 9-6"></path>
+            </svg>
+            Contact Us
+        </a>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <script src="js/load.js"></script>
+
+    <!--  JavaScript Filter Logic -->
+    <script>
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const projects = document.querySelectorAll('.project-card');
+
+        const removeActiveClasses = btn => {
+            btn.classList.remove('bg-blue-500', 'text-white');
+        };
+        const addActiveClasses = (btn, color) => {
+            btn.classList.add(color, 'text-white');
+        };
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove styles from all buttons
+                filterButtons.forEach(btn => removeActiveClasses(btn));
+
+                // Add active style to clicked one
+                const filter = button.getAttribute('data-filter');
+                let color = '';
+                if (filter === 'all') color = 'bg-blue-500';
+                else if (filter === 'web') color = 'bg-blue-500';
+                else if (filter === 'app') color = 'bg-blue-500';
+                addActiveClasses(button, color);
+                // Filter cards
+                projects.forEach(card => {
+                    if (filter === 'all') {
+                        card.classList.remove('hidden');
+                    } else {
+                        card.classList.toggle('hidden', !card.classList.contains(filter));
+                    }
+                });
+            });
+        });
+        window.addEventListener('DOMContentLoaded', () => {
+            const defaultBtn = document.querySelector('.filter-btn[data-filter="all"]');
+            defaultBtn.classList.add('bg-blue-500', 'text-white');
+        });
+    </script>
+
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

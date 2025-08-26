@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Code Monks</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <!-- Optimized Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Sora:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+html, body {
+  overflow-x: hidden;
+}
+
+  </style>
+</head>
+<body>
+
+  <section class="hero-section relative " data-header-type="transparent">
+    <img src="https://themewagon.github.io/Company/assets/img/hero-carousel/hero-carousel-2.jpg" alt="Hero Image"
+      class="absolute inset-0 w-full h-full object-cover brightness-50 z-0" />
+    <div>
+      <!-- Header -->
+      <div id="navbar" class="w-full"></div>
+      <!-- Main Home Content -->
+      <main class="relative z-10">
+        <div id="homeContent"
+          class="min-h-[80vh] flex flex-col items-center justify-center text-white text-center px-4 pt-24 sm:pt-28 md:pt-32 lg:pt-36">
+          <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 leading-snug">
+            Welcome to Code Monks
+          </h1>
+          <p class="text-base sm:text-lg md:text-xl max-w-2xl leading-relaxed">
+            We build awesome things. Ready to grow your brand? Let’s build something great together.
+          </p>
+          <a href="services.html"
+            class="mt-6 inline-block bg-white text-purple-600 font-semibold px-6 py-3 rounded-full hover:bg-blue-200  transition-transform transform hover:scale-105 transition">
+            Explore Our Services
+          </a>
+        </div>
+      </main>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="relative z-10 -mt-20 px-6">
+    <div class="bg-transparent max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6" data-aos="fade-up" data-aos-delay="200">
+        <!-- Card 1 -->
+        <div class="bg-white p-8 relative overflow-hidden group shadow-sm hover:shadow-2xl 
+                  transition duration-500 hover:bg-sky-200 rounded-lg">
+          <div class="flex justify-center relative mb-6">
+            <span class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 
+                       w-24 h-24 rounded-full bg-cyan-100 blur-2xl opacity-70 
+                       transition-transform duration-500 ease-in-out 
+                       group-hover:scale-125 group-hover:rotate-45"></span>
+            <i class="bi bi-phone text-cyan-600 text-4xl z-10 relative"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-800 mb-3 text-center">Mobile App Development</h3>
+          <p class="text-base text-gray-600 italic mb-4 text-center">Crafting sleek and performant mobile experiences.
+          </p>
+          <ul class="text-gray-700 text-sm list-disc list-inside space-y-2">
+            <li>Kotlin (Android), Swift (iOS)</li>
+            <li>React Native & Flutter</li>
+            <li>High-performance architecture</li>
+            <li>Intuitive UI/UX</li>
+            <li>API integrations</li>
+          </ul>
+        </div>
+        <!-- Web Development -->
+        <div class="bg-white p-8 relative overflow-hidden group shadow-sm hover:shadow-2xl
+        transition duration-1000 hover:bg-sky-200
+        ">
+          <div class="flex justify-center relative mb-6">
+            <div
+              class="absolute w-24 h-24 rounded-full bg-orange-100 blur-2xl opacity-70 transition-all duration-500 group-hover:scale-125 group-hover:rotate-45">
+            </div>
+            <i class="bi bi-laptop text-orange-500 text-4xl z-10"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-800 mb-3 text-center">Web Development</h3>
+          <p class="text-base text-gray-600 italic mb-4 text-center">Modern, responsive and SEO-friendly websites and
+            web apps.</p>
+          <ul class="text-gray-700 text-sm list-disc list-inside space-y-2">
+            <li>React.js, Next.js</li>
+            <li>Responsive & SEO Optimized</li>
+            <li>UI/UX focused</li>
+            <li>PWA support</li>
+            <li>Secure infrastructure</li>
+          </ul>
+        </div>
+        <!-- CRM Development -->
+        <div class="bg-white p-8 relative overflow-hidden group shadow-sm hover:shadow-2xl
+        transition duration-500 hover:bg-sky-200
+        ">
+          <div class="flex justify-center relative mb-6">
+            <div
+              class="absolute w-24 h-24 rounded-full bg-purple-100 blur-2xl opacity-70 transition-all duration-500 group-hover:scale-125 group-hover:rotate-45">
+            </div>
+            <i class="bi bi-kanban text-purple-600 text-4xl z-10"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-800 mb-3 text-center">Custom CRM Development</h3>
+          <p class="text-base text-gray-600 italic mb-4 text-center">Automate and organize your business operations.</p>
+          <ul class="text-gray-700 text-sm list-disc list-inside space-y-2">
+            <li>Lead tracking</li>
+            <li>Workflow automation</li>
+            <li>Reports & dashboards</li>
+            <li>Team collaboration</li>
+            <li>Custom features</li>
+          </ul>
+        </div>
+        <!-- Cloud & DevOps -->
+        <div class="bg-white p-8 relative overflow-hidden group shadow-sm hover:shadow-2xl
+        transition duration-1000 hover:bg-sky-200
+        ">
+          <div class="flex justify-center relative mb-6">
+            <div
+              class="absolute w-24 h-24 rounded-full bg-indigo-100 blur-2xl opacity-70 transition-all duration-500 group-hover:scale-125 group-hover:rotate-45">
+            </div>
+            <i class="bi bi-cloud text-indigo-500 text-4xl z-10"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-800 mb-3 text-center">Cloud & DevOps</h3>
+          <p class="text-base text-gray-600 italic mb-4 text-center">Infrastructure, CI/CD and cloud solutions.</p>
+          <ul class="text-gray-700 text-sm list-disc list-inside space-y-2">
+            <li>AWS, Azure, GCP</li>
+            <li>Migration & Scaling</li>
+            <li>CI/CD Pipelines</li>
+            <li>Compliance & Security</li>
+            <li>Efficient Infra</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Preview Section -->
+  <section class="py-16">
+    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
+      <!-- Text -->
+      <div data-aos="fade-right">
+        <h2 class="text-3xl font-bold text-gray-800 mb-4">About Code
+          Monks</h2>
+        <p class="text-base text-gray-700">
+          At <strong>Code Monks</strong>, we’re not just developers—we’re problem solvers. We build smart, scalable, and
+          elegant software that powers startups and enterprises alike.
+        </p>
+        <p class="text-base text-gray-700 mb-6">
+          With a deep understanding of technology and a passion for innovation, we turn complex ideas into powerful
+          digital products.
+        </p>
+        <!-- Buttons -->
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="about.html"
+            class="inline-block px-6 py-3 bg-orange-500 text-white font-medium rounded-full shadow-md hover:bg-orange-600 transition">
+            Get More Details
+          </a>
+          <a href="contact.html"
+            class="inline-flex items-center px-6 py-3 bg-gray-800 text-white font-medium rounded-full shadow-md hover:bg-gray-900 transition">
+            Let's Connect
+            <span class="ml-2 text-lg">&gt;</span>
+          </a>
+        </div>
+      </div>
+      <!-- Image -->
+      <img src="images/domenico-loia-hGV2TfOh0ns-unsplash.jpg" alt="About Code Monks"
+        class="rounded-xl shadow-md w-full" data-aos="fade-left">
+    </div>
+  </section>
+
+  <!-- testimonials -->
+  <section class="" id="testimonials">
+    <div class="max-w-6xl mx-auto px-4" data-aos="fade-up" data-aos-duration="1000">
+      <h2 class="text-3xl md:text-4xl font-bold text-center text-blue-600 mb-12"
+        style="font-family: 'Space Grotesk', sans-serif;" data-aos="zoom-in">
+        Testimonials
+      </h2>
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <!-- Slide 1 -->
+          <div class="swiper-slide min-h-[340px] p-6 rounded-lg shadow bg-gray-50 relative group overflow-hidden">
+            <!-- Top content -->
+            <p
+              class="text-gray-700 text-center mb-20 mt-10 line-clamp-4 transition-all duration-300 group-hover:line-clamp-none">
+              Working with Code Monks was a game-changer for our business. Their team not only delivered high-quality
+              solutions on time but also went the extra mile to understand our needs. Truly a partner you can rely on!
+            </p>
+            <!-- Bottom content -->
+            <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 text-center">
+              <img src="https://i.pravatar.cc/80?img=32" alt="Aprna Katiyar"
+                class="w-16 h-16 mx-auto rounded-full mb-2 shadow" />
+              <h4
+                class="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">
+                Arpna katiyar
+              </h4>
+              <p class="text-sm text-gray-500">Founder, AppNova</p>
+            </div>
+          </div>
+          <!-- Slide 2 -->
+          <div class="swiper-slide min-h-[340px] p-6 rounded-xl shadow-md relative group overflow-hidden bg-gray-50">
+            <p
+              class="text-gray-700 text-center mb-20 mt-10 line-clamp-4 transition-all duration-300 group-hover:line-clamp-none">
+              The professionalism, attention to detail, and technical expertise of Code Monks exceeded our expectations.
+              They transformed our vision into a flawless product, and the support post-launch has been outstanding.
+            </p>
+            <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 text-center">
+              <img src="https://i.pravatar.cc/80?img=45" alt="Taruna Baisla"
+                class="w-16 h-16 mx-auto rounded-full mb-2 shadow" />
+              <h4
+                class="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">
+                Taruna Baisla
+              </h4>
+              <p class="text-sm text-gray-500">Marketing Head, ShopLink</p>
+            </div>
+          </div>
+          <!-- Slide 3 -->
+          <div class="swiper-slide min-h-[340px] p-6 rounded-xl shadow-md relative group overflow-hidden bg-gray-50">
+            <p
+              class="text-gray-700 text-center mb-20 mt-10 line-clamp-4 transition-all duration-300 group-hover:line-clamp-none">
+              Code Monks brought creativity, skill, and efficiency to the table. The communication was seamless, and
+              their problem-solving approach helped us overcome challenges with ease. Highly recommended!
+            </p>
+            <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 text-center">
+              <img src="https://i.pravatar.cc/80?img=12" alt="Prateek Negi"
+                class="w-16 h-16 mx-auto rounded-full mb-2 shadow" />
+              <h4
+                class="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">
+                Prateek Negi
+              </h4>
+              <p class="text-sm text-gray-500">CEO, LeadTech</p>
+            </div>
+          </div>
+          <!-- Slide 4 -->
+          <div class="swiper-slide min-h-[340px] p-6 rounded-xl shadow-md relative group overflow-hidden bg-gray-50">
+            <p
+              class="text-gray-700 text-center mb-20 mt-10 line-clamp-4 transition-all duration-300 group-hover:line-clamp-none">
+              From day one, Code Monks demonstrated exceptional commitment and technical brilliance. They delivered a
+              robust, scalable solution that perfectly aligned with our goals. A top-tier IT partner!
+            </p>
+            <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 text-center">
+              <img src="https://i.pravatar.cc/80?img=45" alt="Priya Baisla"
+                class="w-16 h-16 mx-auto rounded-full mb-2 shadow" />
+              <h4
+                class="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">
+                Priya Baisla
+              </h4>
+              <p class="text-sm text-gray-500">Marketing Head, ShopLink</p>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <!-- Footer -->
+  <div id="footer" class="mt-4"></div>
+
+  <!--load components-->
+  <script src="js/load.js"></script>
+
+  <!-- AOS Script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      once: false,
+      duration: 500,
+      easing: 'ease-in-out'
+    });
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const swiper = new Swiper(".mySwiper", {
+        loop: true,
+        spaceBetween: 30,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+      });
+
+      // Intersection Observer
+      const swiperSection = document.querySelector(".mySwiper");
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            swiper.autoplay.start();
+          } else {
+            swiper.autoplay.stop();
+          }
+        });
+      }, { threshold: 0.2 });
+
+      observer.observe(swiperSection);
+    });
+  </script>
+</body>
+
+</html>
