@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('nav a, #mobileMenu a').forEach(link => {
       const linkPage = link.getAttribute('href').split('/').pop();
       if (linkPage === currentPage) {
-        link.classList.add('text-blue-600', 'font-semibold');
+        link.classList.add('text-[#009db0]', 'font-semibold');
       }
     });
   }
