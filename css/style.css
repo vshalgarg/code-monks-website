@@ -3,6 +3,24 @@
 body {
       font-family: 'raleway', sans-serif;
       background-color: white;
+}
 
-    }
+#menuToggle:checked ~ #mobileMenu {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#header {
+  background-color: transparent;
+  box-shadow: none;
+  /* Transition */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#header.scrolled {
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+  
 
