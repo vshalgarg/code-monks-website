@@ -22,5 +22,94 @@ body {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-  
+  /* product-page */
 
+  /* Hide all by default */
+#project-container .project-card {
+  display: none;
+}
+
+/* Show all */
+#all:checked ~ .filters ~ #project-container .project-card {
+  display: block;
+}
+
+/* Show only Web */
+#web:checked ~ .filters ~ #project-container .project-card.web {
+  display: block;
+}
+
+/* Show only App */
+#app:checked ~ .filters ~ #project-container .project-card.app {
+  display: block;
+}
+
+/* Default button style */
+.filter-btn {
+  background: white;
+  border: 1px solid #d1d5db; /* gray-300 */
+  color: #374151; /* gray-700 */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 1rem; /* rounded-2xl */
+  padding: 0.5rem 1.5rem; /* px-6 py-2 */
+  font-size: 0.75rem; /* text-xs */
+  font-weight: 500;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* Hover effect */
+.filter-btn:hover {
+  background: #2563eb; /* blue */
+  color: white;
+  border-color: #2563eb;
+}
+
+/* Active button style */
+#all:checked ~ .filters label[for="all"],
+#web:checked ~ .filters label[for="web"],
+#app:checked ~ .filters label[for="app"] {
+  background: #2563eb;
+  color: white;
+  border-color: #2563eb;
+  box-shadow: 0 2px 6px rgba(37, 99, 235, 0.4);
+}
+/* product-page end */
+
+
+/* about-page-start-css */
+
+/* Fade Up */
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1s ease-out forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Zoom In */
+.zoom-in {
+  opacity: 0;
+  transform: scale(0.9);
+  animation: zoomIn 1s ease-out forwards;
+}
+
+@keyframes zoomIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Optional: Delay utility classes */
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+
+/* about-page-end */
