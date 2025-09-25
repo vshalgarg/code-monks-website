@@ -10,7 +10,7 @@
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-     
+
 
   <!-- Optimized Google Fonts -->
   <link
@@ -24,185 +24,74 @@
     rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 
-
-  <style>
-
-     html,
-    body {
-      overflow-x: hidden;
-    }
-
-/* Fade Up */
-.fade-up {
-  opacity: 0;
-  transform: translateY(40px);
-  animation: fadeUp 1s ease-out forwards;
-}
-
-/* Zoom In */
-.zoom-in {
-  opacity: 0;
-  transform: scale(0.9);
-  animation: zoomIn 1s ease-out forwards;
-  animation-delay: 0.2s; /* starts a bit later */
-}
-
-/* Keyframes */
-@keyframes fadeUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes zoomIn {
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-/* swiper */
-    .slides {
-      position: relative;
-      width: 100%;
-      height: auto;
-       min-height: 200px;
-    }
-
-    .slide {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      opacity: 0;
-      transition: opacity 1s ease-in-out;
-      padding-bottom: 3rem;
-      height: 170px;
-    }
-
-    /* Auto play keyframes */
-    @keyframes fade {
-      0% { opacity: 0; }
-      5% { opacity: 1; }
-      25% { opacity: 1; }
-      30% { opacity: 0; }
-      100% { opacity: 0; }
-    }
-
-    .slide1 { animation: fade 16s infinite; }
-    .slide2 { animation: fade 16s infinite 4s; }
-    .slide3 { animation: fade 16s infinite 8s; }
-    .slide4 { animation: fade 16s infinite 12s; }
-
-    
-/* Dots */
-.dots {
-  text-align: center;
-  margin-top: 1rem;
-}
-
-    /* Dots */
-    .dots span {
-      display: inline-block;
-      width: 10px;
-      height: 10px;
-      margin: 0 4px;
-      background: #bbb;
-      border-radius: 50%;
-      
-    }
-
-    /* Active dot animation */
-    @keyframes highlight {
-      0%, 25% { background: #3b82f6; transform: scale(1.2); }
-      26%, 100% { background: #bbb; transform: scale(1); }
-    }
-    .dot1 { animation: highlight 16s infinite; }
-    .dot2 { animation: highlight 16s infinite 4s; }
-    .dot3 { animation: highlight 16s infinite 8s; }
-    .dot4 { animation: highlight 16s infinite 12s; }
-
-    /* Responsive text adjustments */
-    @media (max-width: 768px) {
-      .slide p {
-        font-size: 0.9rem;
-        line-height: 1.4rem;
-      }
-      .slide h4 {
-        font-size: 1rem;
-      }
-    }
-</style>
-
 </head>
 
 <body>
 
-  <section class="hero-section relative">
-  <img src="https://themewagon.github.io/Company/assets/img/hero-carousel/hero-carousel-2.jpg" 
-       alt="Hero Image"
-       class="absolute inset-0 w-full h-full object-cover brightness-30 z-0" />
+  <section class="relative min-h-screen">
+    <img src="https://themewagon.github.io/Company/assets/img/hero-carousel/hero-carousel-2.jpg" alt="Hero Image"
+      class="absolute inset-0 w-full h-full object-cover brightness-50 z-0" />
 
-  <div>
-    <!-- Header -->
-    <header class="shadow-lg transition-all duration-300 w-full z-[9999] opacity-70 h-24 relative">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
-        <nav class="flex justify-between items-center h-full">
-          <div class="flex items-center space-x-2">
-            <img src="images/logo/logo-blue-trans.png" alt="Code Monks Logo"
-              class="w-32 sm:w-16 md:w-24 lg:w-32 h-auto object-contain" />
-          </div>
-          <div class="hidden md:flex space-x-6 nav-links">
-            <a href="index.html" class="text-blue-600 font-medium hover:text-blue-900 transition-colors duration-300">Home</a>
-            <a href="about.html" class="text-white font-medium hover:text-blue-600 transition-colors duration-300">About Us</a>
-            <a href="services.html" class="text-white font-medium hover:text-blue-600 transition-colors duration-300">Services</a>
-            <a href="products.html" class="text-white font-medium hover:text-blue-600 transition-colors duration-300">Products</a>
-            <a href="contact.html" class="text-white font-medium hover:text-blue-600 transition-colors duration-300">Contact</a>
-          </div>
+    <header class="fixed top-0 left-0 w-full bg-white/50 backdrop-blur shadow-lg z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+        <div class="flex items-center">
+          <img src="images/logo/logo-blue-trans.png" alt="Code Monks Logo" class="w-24 h-auto object-contain" />
+        </div>
 
-          <!-- Checkbox and label inside nav -->
-          <input type="checkbox" id="menuToggle" class="hidden" />
-          <label for="menuToggle" class="md:hidden cursor-pointer focus:outline-none p-2">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          </label>
-
-          <div id="mobileMenu" class="md:hidden fixed right-4 top-24 bg-white rounded-lg shadow-lg w-48 overflow-hidden z-[9999]
-            opacity-0 pointer-events-none transition-opacity duration-300">
-            <a href="index.html"
-              class="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Home</a>
-            <a href="about.html"
-              class="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">About Us</a>
-            <a href="services.html"
-              class="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Services</a>
-            <a href="products.html"
-              class="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Products</a>
-            <a href="contact.html"
-              class="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Contact</a>
-          </div>
+        <!-- Desktop Menu -->
+        <nav class="hidden md:flex space-x-6">
+          <a href="index.html"
+            class="text-blue-600 font-medium hover:text-blue-900 transition-colors duration-300">Home</a>
+          <a href="about.html"
+            class="text-gray-700 font-medium hover:text-blue-600 transition-colors duration-300">About Us</a>
+          <a href="services.html"
+            class="text-gray-700 font-medium hover:text-blue-600 transition-colors duration-300">Services</a>
+          <a href="products.html"
+            class="text-gray-700 font-medium hover:text-blue-600 transition-colors duration-300">Products</a>
+          <a href="contact.html"
+            class="text-gray-700 font-medium hover:text-blue-600 transition-colors duration-300">Contact</a>
         </nav>
+
+        <!-- Hamburger Menu Button -->
+        <button id="menuToggle" class="md:hidden p-2 focus:outline-none">
+          <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobileMenu"
+        class="hidden md:hidden bg-white shadow-lg absolute top-16 right-4 w-48 rounded-lg overflow-hidden z-50">
+        <a href="index.html"
+          class="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Home</a>
+        <a href="about.html" class="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">About
+          Us</a>
+        <a href="services.html"
+          class="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Services</a>
+        <a href="products.html"
+          class="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Products</a>
+        <a href="contact.html"
+          class="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Contact</a>
       </div>
     </header>
-    <!-- Main Home Content -->
-    <main class="relative z-10">
-      <div id="homeContent"
-        class="min-h-[80vh] flex flex-col items-center justify-center text-white text-center px-4 pt-24 sm:pt-28 md:pt-32 lg:pt-36">
-        <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 leading-snug">
+
+    <!-- Main Content -->
+    <div class="relative z-10 pt-20 pb-10 min-h-[calc(100vh-4rem)] flex items-center justify-center">
+      <div id="homeContent" class="flex flex-col items-center justify-center text-white text-center px-4">
+        <h1 class="text-3xl sm:text-2xl md:text-5xl font-bold mb-4 leading-snug">
           Welcome to Code Monks
         </h1>
         <p class="text-base sm:text-lg md:text-xl max-w-2xl leading-relaxed">
           We build awesome things. Ready to grow your brand? Let’s build something great together.
         </p>
         <a href="services.html"
-          class="mt-6 inline-block bg-white text-purple-600 font-semibold px-6 py-3 rounded-full hover:bg-blue-200 transition-transform transform hover:scale-105 transition">
+          class="mt-6 inline-block bg-white text-purple-600 font-semibold px-6 py-3 rounded-full hover:bg-blue-200 transition-transform transform hover:scale-105">
           Explore Our Services
         </a>
       </div>
-    </main>
-  </div>
-</section>
+    </div>
+  </section>
 
   <!-- Services Section -->
   <section class="relative z-10 -mt-20 px-6">
@@ -231,7 +120,7 @@
         </div>
         <!-- Web Development -->
         <div class="bg-white p-8 relative overflow-hidden group shadow-sm hover:shadow-2xl
-        transition duration-1000 hover:bg-sky-200
+        transition duration-1000 hover:bg-sky-200 rounded-lg
         ">
           <div class="flex justify-center relative mb-6">
             <div
@@ -252,7 +141,7 @@
         </div>
         <!-- CRM Development -->
         <div class="bg-white p-8 relative overflow-hidden group shadow-sm hover:shadow-2xl
-        transition duration-500 hover:bg-sky-200
+        transition duration-500 hover:bg-sky-200 rounded-lg
         ">
           <div class="flex justify-center relative mb-6">
             <div
@@ -272,7 +161,7 @@
         </div>
         <!-- Cloud & DevOps -->
         <div class="bg-white p-8 relative overflow-hidden group shadow-sm hover:shadow-2xl
-        transition duration-1000 hover:bg-sky-200
+        transition duration-1000 hover:bg-sky-200 rounded-lg
         ">
           <div class="flex justify-center relative mb-6">
             <div
@@ -391,90 +280,98 @@
 
     </div>
 
-     <!-- Dots (Fixed inside card bottom center) -->
-       <div class="dots flex justify-center mt-4">
-        <span class="dot1"></span>
-        <span class="dot2"></span>
-        <span class="dot3"></span>
-        <span class="dot4"></span>
-      </div>
+    <!-- Dots (Fixed inside card bottom center) -->
+    <div class="dots flex justify-center mt-4">
+      <span class="dot1"></span>
+      <span class="dot2"></span>
+      <span class="dot3"></span>
+      <span class="dot4"></span>
+    </div>
 
   </section>
 
-  <!-- Footer -->
-  <footer class="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-gray-300 pt-6 pb-6">
-    <div class="max-w-6xl mx-auto px-6">
-      <!-- Top Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-5 gap-8 pb-10 border-b border-gray-700 items-center">
-        <!-- Logo & Intro -->
+<!-- Footer -->
+<footer class="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-gray-300 pt-12 pb-6">
+  <div class="max-w-6xl mx-auto px-6">
+    <!-- Top Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-[repeat(5,1fr)] gap-8 pb-10 border-b border-gray-700 items-stretch">
+      
+      <!-- Logo & Intro -->
+      <div class="flex flex-col h-full">
+        <h2 class="text-2xl font-bold text-white mb-2">Code Monks</h2>
+        <p class="text-sm text-gray-400">
+          Building reliable, scalable, and intelligent software solutions with clean code and great minds.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="flex flex-col h-full">
+        <h3 class="text-white font-semibold mb-4">Company</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="/about.html" class="hover:text-white">About Us</a></li>
+          <li><a href="/index.html" class="hover:text-white">Careers</a></li>
+          <li><a href="/index.html" class="hover:text-white">Blog</a></li>
+          <li><a href="/contact.html" class="hover:text-white">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Services -->
+      <div class="flex flex-col h-full">
+        <h3 class="text-white font-semibold mb-4">Services</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="/services.html" class="hover:text-white">Web Development</a></li>
+          <li><a href="/services.html" class="hover:text-white">Mobile Apps</a></li>
+          <li><a href="/services.html" class="hover:text-white">Cloud Solutions</a></li>
+          <li><a href="/services.html" class="hover:text-white">AI / ML</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact + Social -->
+      <div class="flex flex-col h-full">
+        <h3 class="text-white font-semibold mb-4">Reach Us</h3>
+        <p class="text-sm text-gray-400">Email: crm@codemonks.in</p>
         <div>
-          <h2 class="text-2xl font-bold text-white mb-2">Code Monks</h2>
-          <p class="text-sm text-gray-400">
-            Building reliable, scalable, and intelligent software solutions with clean code and great minds.
-          </p>
+          <span class="text-sm text-gray-400">Phone: +91-9999131058</span>
+          <br>
+          <span class="text-sm text-gray-400 block">+91-7503366400</span>
         </div>
-        <!-- Quick Links -->
-        <div>
-          <h3 class="text-white font-semibold mb-4">Company</h3>
-          <ul class="space-y-2 text-sm">
-            <li><a href="/about.html" class="hover:text-white">About Us</a></li>
-            <li><a href="/index.html" class="hover:text-white">Careers</a></li>
-            <li><a href="/index.html" class="hover:text-white">Blog</a></li>
-            <li><a href="/contact.html" class="hover:text-white">Contact</a></li>
-          </ul>
-        </div>
-        <!-- Services -->
-        <div>
-          <h3 class="text-white font-semibold mb-4">Services</h3>
-          <ul class="space-y-2 text-sm">
-            <li><a href="/services.html" class="hover:text-white">Web Development</a></li>
-            <li><a href="/services.html" class="hover:text-white">Mobile Apps</a></li>
-            <li><a href="/services.html" class="hover:text-white">Cloud Solutions</a></li>
-            <li><a href="/services.html" class="hover:text-white">AI / ML</a></li>
-          </ul>
-        </div>
-        <!-- Contact + Button -->
-        <div>
-          <div class="flex items-start justify-between">
-            <div>
-              <h3 class="text-white font-semibold mb-4">Reach Us</h3>
-              <p class="text-sm text-gray-400">Email: contact@codemonks.dev</p>
-              <p class="text-sm text-gray-400">Phone: +91-9876543210</p>
-              <div class="flex space-x-4 mt-4">
-                <!-- LinkedIn -->
-                <a href="https://www.linkedin.com" target="_blank">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"
-                    class="w-6 h-6 hover:scale-110 transition duration-200" alt="LinkedIn" />
-                </a>
-                <!-- GitHub -->
-                <a href="https://www.github.com" target="_blank">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
-                    class="w-6 h-6 hover:scale-110 transition duration-200" alt="GitHub" />
-                </a>
-                <!-- Twitter -->
-                <a href="https://twitter.com" target="_blank">
-                  <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/twitter.svg"
-                    class="w-6 h-6 hover:scale-110 transition duration-200 invert" alt="Twitter" />
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div>
-          <!-- Reach Out Button -->
-          <a href="/contact.html"
-            class="ml-4 mt-1 inline-block bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-blue-700 transition">
-            Connect With Us
+        <div class="flex space-x-4 mt-4">
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com" target="_blank">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"
+              class="w-6 h-6 hover:scale-110 transition duration-200" alt="LinkedIn" />
+          </a>
+          <!-- GitHub -->
+          <a href="https://www.github.com" target="_blank" class="inline-block bg-white">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+              class="w-6 h-6 hover:scale-110 transition duration-200" alt="GitHub" />
+          </a>
+          <!-- Twitter -->
+          <a href="https://twitter.com" target="_blank">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/twitter.svg"
+              class="w-6 h-6 hover:scale-110 transition duration-200 invert" alt="Twitter" />
           </a>
         </div>
       </div>
-      <!-- Bottom Bar -->
-      <div class="text-center text-sm text-gray-500 pt-6">
-        © 2025 <span class="text-white font-medium">Code Monks</span>. Crafted with ❤️ for innovation.
+
+      <!-- Reach Out Button -->
+      <div class="flex flex-col h-full md:items-end">
+        <a href="/contact.html"
+          class="ml-4 mt-1 inline-block bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-blue-700 transition">
+          Connect With Us
+        </a>
       </div>
     </div>
-  </footer>
 
+    <!-- Bottom Bar -->
+    <div class="text-center text-sm text-gray-500 pt-6">
+      © 2025 <span class="text-white font-medium">Code Monks</span>. Crafted with ❤️ for innovation.
+    </div>
+  </div>
+</footer>
+
+
+  <script src="js/toggle.js"></script>
 </body>
 
 </html>

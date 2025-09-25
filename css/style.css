@@ -1,9 +1,170 @@
 /* css/styles.css */
 
+
 body {
       font-family: 'raleway', sans-serif;
       background-color: white;
 }
+
+
+
+/* home page css start*/
+html,
+    body {
+      overflow-x: hidden;
+    }
+
+    /* Fade Up */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(40px);
+      animation: fadeUp 1s ease-out forwards;
+    }
+
+    /* Zoom In */
+    .zoom-in {
+      opacity: 0;
+      transform: scale(0.9);
+      animation: zoomIn 1s ease-out forwards;
+      animation-delay: 0.2s;
+      /* starts a bit later */
+    }
+
+    /* Keyframes */
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes zoomIn {
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    /* swiper */
+    .slides {
+      position: relative;
+      width: 100%;
+      height: auto;
+      min-height: 200px;
+    }
+
+    .slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+      padding-bottom: 3rem;
+      height: 170px;
+    }
+
+    /* Auto play keyframes */
+    @keyframes fade {
+      0% {
+        opacity: 0;
+      }
+
+      5% {
+        opacity: 1;
+      }
+
+      25% {
+        opacity: 1;
+      }
+
+      30% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 0;
+      }
+    }
+
+    .slide1 {
+      animation: fade 16s infinite;
+    }
+
+    .slide2 {
+      animation: fade 16s infinite 4s;
+    }
+
+    .slide3 {
+      animation: fade 16s infinite 8s;
+    }
+
+    .slide4 {
+      animation: fade 16s infinite 12s;
+    }
+
+
+    /* Dots */
+    .dots {
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    /* Dots */
+    .dots span {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      margin: 0 4px;
+      background: #bbb;
+      border-radius: 50%;
+
+    }
+
+    /* Active dot animation */
+    @keyframes highlight {
+
+      0%,
+      25% {
+        background: #3b82f6;
+        transform: scale(1.2);
+      }
+
+      26%,
+      100% {
+        background: #bbb;
+        transform: scale(1);
+      }
+    }
+
+    .dot1 {
+      animation: highlight 16s infinite;
+    }
+
+    .dot2 {
+      animation: highlight 16s infinite 4s;
+    }
+
+    .dot3 {
+      animation: highlight 16s infinite 8s;
+    }
+
+    .dot4 {
+      animation: highlight 16s infinite 12s;
+    }
+
+    /* Responsive text adjustments */
+    @media (max-width: 768px) {
+      .slide p {
+        font-size: 0.9rem;
+        line-height: 1.4rem;
+      }
+
+      .slide h4 {
+        font-size: 1rem;
+      }
+    }
+/* home page css end*/
 
 #menuToggle:checked ~ #mobileMenu {
   opacity: 1;
