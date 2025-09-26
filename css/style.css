@@ -1,6 +1,13 @@
 /* css/styles.css */
 
 
+/* Safe Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'raleway', sans-serif;
   background-color: white;
@@ -11,6 +18,7 @@ body {
 }
 
 /* home page css start*/
+
 html,
 body {
   overflow-x: hidden;
